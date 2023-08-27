@@ -1,0 +1,6 @@
+[submodule "gamearchive_backend"]
+	path = gamearchive_backend
+	url = https://github.com/teruteru214/gamearchive_backend.git
+[submodule "gamearchive_frontend"]
+	path = gamearchive_frontend
+	url = https://github.com/teruteru214/gamearchive_frontend.git
