@@ -2,11 +2,19 @@
 
 GameArchiveは、ゲームエンターテイメントをより管理しやすくするための一体型データベースサービスです。
 
-ユーザーはゲームの状況に応じて（例：クリア、プレイ中、積みゲー）、様々なゲーム情報を取得して保存することができます。取得したゲームは、画像、タイトル、評価値、ジャンル、プラットフォーム、外部サイトへのURLなど、多彩なデータとともに管理されます。
+ユーザーはゲームの状況に応じて（例：クリア、プレイ中、積みゲー）、様々なゲーム情報を取得して保存することができます。取得したゲームは、画像、タイトル、評価値、ジャンル、プラットフォーム、外部サイトへのURLなど、多彩なデータとともに管理されます。また積みゲー防止のために取得した積みゲーのプレイを促す通知を公式チャンネルから定期的に受け取ることができます。
 
 ▼**サービス URL**
 
 https://gamearchiveapp.com/
+
+▼**告知ツイート**
+
+https://twitter.com/teruteru1237/status/1710495531330592973
+
+▼**紹介記事**
+
+https://qiita.com/teruteru214/items/3520e2e67d3ca9b39749
 
 <br>
 
@@ -21,30 +29,49 @@ https://gamearchiveapp.com/
 
 <br>
 
-## 主な機能
+# サービス概要と使い方
+GameArchiveはゲームをプレイ状況に合わせて取得して、管理するアプリです。ほとんどの機能はログインすることによって使える機能となっています。
 
-### ゲーム取得機能（検索・取得）
+## ①ゲーム取得
+1.ゲームを検索します
+2.ゲームを選んで、取得ボタンを押します。(ログインユーザーのみ)
+3.プレイ状況(積みゲー、プレイ中、クリア)を選んで、実際にゲームを取得します(ログインユーザーのみ)
+![ezgif.com-gif-maker (3).gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/1516027/ca78c62d-23a4-12fe-0ad2-b7d9d9f9e24a.gif)
+取得されるゲームはIGDBAPIから取得されます。またさらにゲームの詳細を知りたい方のために、画像や詳細ボタンをクリックすればIGDBに遷移して、細かいゲーム情報を見ることができます。
 
-| ゲーム検索機能                                                                                                                    | ゲーム取得機能                                                                                                                |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------|
-| <img src="./assets/search.gif"> | <img src="./assets/addgame.gif"> |
-| 外部APIからゲームしデータを取得できます。                                                  | ゲームステータスを入力してからゲームを保存できます。（**ログインユーザー限定**）                                 |
+## ②ゲームマネジメント
+マネジメントページでは取得ゲームを用いてさまざまな管理ができます。ログインが必要です。
+![ezgif.com-video-to-gif (4).gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/1516027/a058f68c-06fb-9e5e-55d6-8aa3abf8e507.gif)
+- ゲームのプレイ状況の変更
+- ゲームのお気に入り登録
+- ゲームの削除
+- ゲーム評価値による並び替え
+- ゲームジャンルやプラットフォームによる絞り込み
+これらの多種多様な管理が可能です。
+## ③積みゲー通知機能
+ログインしてLINEの友達登録をしたユーザーのみ使用可能です。
+また積みゲー通知には積みゲー登録のゲームが必要です。
+<table>
+  <tr>
+    <td style="background-color: white; width: 66%;">
+    　　　　　<img src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/1516027/28b6c92a-abc2-11f9-69e0-9ef29be89fa3.gif" style="background-color: #C0C0C0;">
+    </td>
+    <td style="background-color: white; width: 33%;">
+      <img src="https://i.gyazo.com/74982440cd853d77a56ddccf52a7f59e.png" style="background-color: #C0C0C0;">
+    </td>
+  </tr>
+  <tr>
+    <td style="background-color: white; 　width: 66%;">
+      通知間隔を入力して、定期的に積みゲープレイを促す通知を送ることができます。(10と入力したら、10日ごとに通知が送られるようになります)
+    </td>
+    </td>
+    <td style="background-color: white; width: 33%;">
+      18時ごろに積みゲーが通知されます(選ばれる積みゲーはランダムです)
+    </td>
+  </tr>
+</table>
 
-<br>
 
-### マネジメント機能
-
-| ゲームステータス変更                                                                                                                    | お気に入り                                                                                                                | ゲーム削除                                                                                                                                                   |
-| ----------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <img src="./assets/statuschange.gif"> | <img src="./assets/favorite.gif"> | <img src="./assets/delete.gif">                        |
-| マネジメントページではいつでもゲームステータスが変更可能です。（**ログインユーザー限定**）                                                  | 星マークのタップでお気に入りの作成と削除ができます。 （**ログインユーザー限定**）                                 | ゴミ箱マークをタップすることによって、ゲームの削除もできます。（**ログインユーザー限定**） |
-
-| ゲームソート機能                                                                                                                            | genreとplatform絞り込み機能                                                                                                            |
-| :---------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| <img src="./assets/sort.gif"> | <img src="./assets/genre_platform.gif"> |
-|  左下の画面設定からソート機能が使えます。 （**ログインユーザー限定**）                                 | ゲームジャンルとプラットフォームで絞り込み表示ができます。（**ログインユーザー限定**） |
-
-<br>
 
 ---
 
@@ -90,6 +117,8 @@ https://gamearchiveapp.com/
 - [Firebase Authentication](https://firebase.google.com/docs/auth?hl=ja)
 - [IGDB API](https://api-docs.igdb.com/#getting-started)
 - [Cloud Translation API](https://cloud.google.com/translate/docs/overview?hl=ja)
+- [LIFF](https://developers.line.biz/ja/docs/liff/overview/)
+- [LINE Messaging API](https://developers.line.biz/ja/docs/messaging-api/overview/)
 
 <br>
 
@@ -99,13 +128,13 @@ https://gamearchiveapp.com/
 
 ## インフラ構成図
 
-<img src="./assets/infra.png">
+[![Image from Gyazo](https://i.gyazo.com/871615fc58210a41e5aa2b03c60a021f.png)](https://gyazo.com/871615fc58210a41e5aa2b03c60a021f)
 
 <br>
 
 ## ER 図
 
-<img src="./assets/er.png">
+![gamearchive-er.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/1516027/ad9882cc-0959-dc7d-299e-3626b95a84b4.png)
 
 <br>
 
@@ -116,6 +145,4 @@ https://gamearchiveapp.com/
 <br>
 
 ## コンポーネント設計
-
-- [Figma](https://www.figma.com/file/Ayi6NyjFxucQoZnR9Q1D8v/game_achirve%E3%81%AE%E3%82%B3%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%8D%E3%83%B3%E3%83%88?type=design&mode=design&t=wLfMSytfvp6mbMJh-0)
-- [Notion](https://teruteru214.notion.site/GameArchive-5c347f28f31649fb8f9f15d0afc81621?pvs=4)
+[Notion](https://teruteru214.notion.site/GameArchive-5c347f28f31649fb8f9f15d0afc81621?pvs=4)
