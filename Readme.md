@@ -134,7 +134,7 @@ GameArchiveはゲームをプレイ状況に合わせて取得して、管理す
 
 ## ER 図
 
-![gamearchive-er.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/1516027/ad9882cc-0959-dc7d-299e-3626b95a84b4.png)
+[![Image from Gyazo](https://i.gyazo.com/45bb8f1d9f9573667905c06496319a68.png)](https://gyazo.com/45bb8f1d9f9573667905c06496319a68)
 
 <br>
 
